@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* M.Y Real Estate — Warm peach & terracotta design system. All colors HSL. */
+
+@layer base {
+  :root {
+    --background: 30 45% 97%;           /* warm cream */
+    --foreground: 18 30% 18%;           /* deep cocoa */
+
+    --card: 30 50% 99%;
+    --card-foreground: 18 30% 18%;
+
+    --popover: 30 50% 99%;
+    --popover-foreground: 18 30% 18%;
+
+    --primary: 14 72% 50%;              /* terracotta */
+    --primary-foreground: 30 50% 98%;
+
+    --secondary: 25 75% 88%;            /* soft peach */
+    --secondary-foreground: 18 40% 22%;
+
+    --muted: 28 35% 92%;
+    --muted-foreground: 20 15% 42%;
+
+    --accent: 22 90% 62%;               /* warm orange */
+    --accent-foreground: 18 40% 15%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 30 50% 98%;
+
+    --border: 25 30% 86%;
+    --input: 25 30% 88%;
+    --ring: 14 72% 50%;
+
+    --radius: 0.9rem;
+
+    --gradient-warm: linear-gradient(135deg, hsl(22 90% 62%), hsl(14 72% 50%));
+    --gradient-soft: linear-gradient(180deg, hsl(30 60% 96%), hsl(25 75% 90%));
+    --gradient-hero: radial-gradient(1200px 600px at 80% -10%, hsl(22 90% 75% / 0.55), transparent 60%),
+                     radial-gradient(900px 500px at -10% 110%, hsl(14 72% 60% / 0.35), transparent 60%),
+                     linear-gradient(180deg, hsl(30 50% 97%), hsl(28 60% 93%));
+
+    --shadow-soft: 0 10px 30px -12px hsl(14 50% 30% / 0.18);
+    --shadow-warm: 0 20px 50px -20px hsl(14 72% 45% / 0.35);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
